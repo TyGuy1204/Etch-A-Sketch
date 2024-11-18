@@ -25,7 +25,9 @@ function draw_grid(grid_size){
 function color_grid(){
     squares.forEach((grid_square) => {
         grid_square.addEventListener("mouseover", () => {
-            grid_square.style.backgroundColor = getRandomRGBColor();
+            if(grid_square.style.backgroundColor === ""){
+                grid_square.style.backgroundColor = getRandomRGBColor();
+            }
         });
     });
 }
