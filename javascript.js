@@ -16,3 +16,9 @@ reset_button.addEventListener("click", () =>{
         div.style.cssText = "background-color:";
     })
 });
+const resize_button = document.querySelector(".resize_button");
+resize_button.addEventListener("click", () => {
+    squares.forEach((div) => {
+        div.remove();
+    })
+});
