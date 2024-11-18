@@ -9,7 +9,4 @@ squares.forEach((div) => {
     div.addEventListener("mouseover", () => {
         div.style.cssText = "background-color: blue";
     });
-    div.addEventListener("mouseleave", () => {
-        div.style.cssText = "background-color:";
-    });
 });
