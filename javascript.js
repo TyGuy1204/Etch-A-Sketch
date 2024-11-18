@@ -1,0 +1,1 @@
+const div_container  = document.querySelector(".div_container");
