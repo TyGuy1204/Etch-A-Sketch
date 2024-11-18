@@ -18,6 +18,7 @@ function draw_grid(grid_size){
         grid_square.classList.add("grid_square");
         grid_square.style.flex = `0 0 calc((100% - ${(grid_size - 1) * gap_size}px) / ${grid_size})`;
         grid_square.style.aspectRatio = '1';
+        grid_square.style.opacity = 0;
         div_container.appendChild(grid_square);
     }
     squares = document.querySelectorAll(".grid_square");
@@ -25,6 +26,7 @@ function draw_grid(grid_size){
 function color_grid(){
     squares.forEach((grid_square) => {
         grid_square.addEventListener("mouseover", () => {
+            grid_square.style.opacity = parseFloat(grid_square.style.opacity) + 0.1;
             if(grid_square.style.backgroundColor === ""){
                 grid_square.style.backgroundColor = getRandomRGBColor();
             }
@@ -34,6 +36,7 @@ function color_grid(){
 function reset_grid(){
     squares.forEach((grid_square) => {
         grid_square.style.backgroundColor = "";
+        grid_square.style.opacity = 0;
     })
 }
 function clearGrid(){
