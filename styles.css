@@ -1,0 +1,15 @@
+
+.div_container{
+    display: flex;
+    flex-wrap:wrap;
+    gap: 1px;
+    aspect-ratio: 1;
+    justify-content: space-evenly;
+}
+.div_container div{
+    flex: 0 0 calc(100vw / 17);
+    aspect-ratio: 1;
+    box-sizing:border-box;
+    border: 2px solid black;
+    border-radius: 8px;
+}
