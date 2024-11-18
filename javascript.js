@@ -10,3 +10,9 @@ squares.forEach((div) => {
         div.style.cssText = "background-color: blue";
     });
 });
+const reset_button = document.querySelector(".reset_button");
+reset_button.addEventListener("click", () =>{
+    squares.forEach((div) => {
+        div.style.cssText = "background-color:";
+    })
+});
